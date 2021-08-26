@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:learning_flutter/screens/home/home_page.dart';
+import 'package:learning_flutter/screens/home.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -10,7 +9,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.blue,
       ),
-      home: HomePage(),
+      home: Home(),
     );
   }
 }
