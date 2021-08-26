@@ -7,7 +7,7 @@ import '../config.dart';
 
 class HttpClient {
   static final BaseOptions options = BaseOptions(
-    baseUrl: Config.BASE_URL,
+    baseUrl: Config.WEATHER_URL,
     connectTimeout: 5000,
     receiveTimeout: 3000,
   );
