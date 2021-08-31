@@ -52,6 +52,17 @@ class HomePage extends ConsumerWidget {
                   'Navigate to next page',
                 ),
               ),
+            ),
+            Center(
+              child: ElevatedButton(
+                onPressed: () => {
+                  NavigatorKeys.homeNavigator.currentState!
+                      .pushNamed("/location")
+                },
+                child: Text(
+                  'Find lattitude and longitude',
+                ),
+              ),
             )
           ],
         ),
