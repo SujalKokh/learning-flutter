@@ -18,9 +18,14 @@ class LocationController extends StateNotifier<LocationState> {
 
   Future<List<Location>?> getLocation(String locationValue) async {
     state = LocationState.loading();
+
     try {
       final location =
           await _read(locationServiceProvider).searchLocation(locationValue);
+      if (location.length == 0) {
+        state = LocationState.error("No data found");
+        return location;
+      }
       state = LocationState.data(location);
       return location;
     } catch (e) {
