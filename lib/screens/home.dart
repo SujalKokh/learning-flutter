@@ -4,6 +4,8 @@ import 'package:learning_flutter/screens/home/home_page.dart';
 import 'package:learning_flutter/screens/weather/weather_page.dart';
 import 'package:learning_flutter/utils/navigator_keys.dart';
 
+import 'location/location_page.dart';
+
 class Home extends ConsumerWidget {
   Route<dynamic> _onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(
@@ -14,6 +16,8 @@ class Home extends ConsumerWidget {
             return HomePage();
           case "/weather":
             return WeatherPage();
+          case "/location":
+            return LocationPage();
         }
         return Container();
       },
